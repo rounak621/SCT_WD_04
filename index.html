@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Todo App</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tasks</h1>
+            <p class="date-display"></p>
+        </header>
+
+        <div class="todo-input-container">
+            <form id="todo-form">
+                <input type="text" id="todo-input" placeholder="Add a new task..." required>
+                <button type="submit" class="add-btn">
+                    <span class="material-icons">add</span>
+                </button>
+            </form>
+        </div>
+
+        <div class="tasks-container">
+            <!-- Tasks will be dynamically added here -->
+            <div class="empty-state">
+                <span class="material-icons">task</span>
+                <p>No tasks yet. Add your first task!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Task Edit Modal -->
+    <div class="modal" id="edit-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Task</h2>
+                <button class="close-modal">
+                    <span class="material-icons">close</span>
+                </button>
+            </div>
+            <form id="edit-form">
+                <input type="text" id="edit-title" placeholder="Task title" required>
+                <textarea id="edit-description" placeholder="Task description"></textarea>
+                <input type="datetime-local" id="edit-datetime">
+                <button type="submit" class="save-btn">Save Changes</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
